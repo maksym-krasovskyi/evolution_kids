@@ -15,12 +15,18 @@
   text-transform: uppercase;
   box-shadow: none;
   transition: all 0.3s ease-in;
-  font-family: PTSansNarrow;
+  font-family: Roboto;
   font-weight: 400;
-}
+  outline: none;
+  &:focus-visible,
+  &:active {
+    box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px,
+      rgb(255, 255, 255) 0px 0px 0px 3px;
+  }
 
-.btn:hover {
-  border-color: #2b3990;
-  background: #fff;
-  color: #2b3990;
+  &:hover {
+    border-color: #2b3990;
+    background: #fff;
+    color: #2b3990;
+  }
 }
