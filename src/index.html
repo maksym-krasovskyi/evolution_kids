@@ -165,7 +165,7 @@
               Пожалуйста, заполните приведенную ниже форму и мы с вами свяжемся
               в ближайшее время.
             </p>
-            <form class="request-call__form">
+            <form class="request-call__form" id="request-call">
               <div class="request-call__form-group">
                 <label for="userName" class="request-call__label">Имя:</label>
                 <input
@@ -182,10 +182,13 @@
                   >Телефон:</label
                 >
                 <input
-                  type="text"
+                  type="tel"
                   class="request-call__input input"
                   id="phone"
-                  required
+                  required="required"
+                  aria-required="true"
+                  pattern="[0-9()#&+*-=.]+"
+                  title="Тоько цыфри и символы телефона (#, -, *, і т.д.) принимаются."
                 />
               </div>
               <button type="submit" class="btn btn-form">Отправить</button>
