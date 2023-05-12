@@ -211,11 +211,16 @@
 			display: block;
 		}
 
+		
 		&:focus-visible,
 		&:active {
 			box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px, rgb(255, 255, 255) 0px 0px 0px 3px;
 		}
 	}
+}
+
+._navigator-active.menu__link::before {
+	width: 100%;
 }
 
 .language {
