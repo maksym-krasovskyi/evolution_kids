@@ -1,3 +1,66 @@
 //====================================================================================================
+//background: #252525;     background: #2d2d2d;
+.footer {
+   background: #252525; 
+   color: #fff;
+
+
+   // .footer__container
+   &__container {
+      padding: 70px 0px;
+   }
+
+   // .footer__content
+   &__content {
+      display: flex;
+      align-items: start;
+   }
+
+   // .footer__actions
+   &__actions {
+      flex: 1 1 50%;
+   }
+
+   // .footer__form
+   &__form {
+
+      &._sending {
+         opacity: 0.7;
+      }
+   }
+
+   // .footer__form-group
+   &__form-group {
+      max-width: 360px;
+      margin-bottom: 20px;
+   }
+
+   // .footer__input
+   &__input {
+      margin-top: 8px;
+   }
+
+   // .footer__submit
+   &__submit {
+   }
+
+   // .footer__contacts
+   &__contacts {
+      flex: 1 1 50%;
+   }
+
+   // .footer__policy
+   &__policy {
+      background: #2d2d2d;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+      font-family: PTSansNarrow, sans-serif;
+      font-weight: 400;
+	   font-style: normal;
+      font-size: 22px;
+      line-height: 108%;
+   }
+}
 
 //====================================================================================================
