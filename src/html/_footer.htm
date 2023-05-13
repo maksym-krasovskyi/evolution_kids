@@ -1,11 +1,21 @@
-<footer class="footer">
+<footer class="footer" id="contacts" data-watch="navigator">
 	<div class="footer__container">
 		<div class="footer__content">
+			<div class="footer__map" id="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2748.0601079373123!2d30.735784776217493!3d46.467317371108024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40c6317f7212ff87%3A0xe504852ce2aa6504!2z0KHRgtCw0YDQvtGB0LXQvdC90LDRjyDQn9C70L7RidCw0LTRjA!5e0!3m2!1sru!2sua!4v1683972546768!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			</div>
 			<div class="footer__actions">
+				<h2 class="footer__heading section-heading" data-da=".footer__container,1200,0">Контакты</h2>
 				<form action="" class="footer__form" id="footerForm">
 					<div class="footer__form-group">
 						<label for="footerUserName">Имя:</label>
-						<input type="text" class="input footer__input" id="footerUserName">
+						<input 
+							type="text" 
+							class="input footer__input" 
+							id="footerUserName" 
+							name="footerUserName"
+							placeholder="Имя:"
+						>
 					</div>
 
 					<div class="footer__form-group">
@@ -17,6 +27,7 @@
 							placeholder="example@mail.com"
 							required="required"
 							aria-required="true"
+							name="footerEmail"
 						>
 					</div>
 
@@ -30,17 +41,61 @@
 							required="required"
 							aria-required="true"
 							pattern="[0-9()#&+*-=.]+"
+							name="footerPhone"
 							title="Тоько цыфри и символы телефона (#, -, *, і т.д.) принимаются."
 						>
+					</div>
+
+					<div class="footer__form-group">
+						<label for="footerMessage">Сообщение:</label>
+						<textarea 
+							class="input footer__textarea" 
+							id="footerMessage" 
+							name="footerMessage"
+							rows="3" 
+							placeholder="Сообщение:"
+						></textarea>
 					</div>
 
 					<button type="submit" class="btn btn-form footer__submit">Отправить</button>
 				</form>
 			</div>
 			<div class="footer__contacts">
+				<ul class="footer__contacts_list contacts">
+					<li class="contacts__item">
+						<a href="mailto:admin@hipolink.net" class="contacts__linck">
+							<svg class="contacts__icon">
+								<use xlink:href="@img/icons/icons.svg#email"></use>
+							</svg>
+							<span>test@gmail.com</span>
+						</a>
+					</li>
+					<li class="contacts__item">
+						<a href="tel:060462696" class="contacts__linck">
+							<svg class="contacts__icon">
+								<use xlink:href="@img/icons/icons.svg#phone"></use>
+							</svg>
 	
+							<span>(303) 555-0105</span>
+						</a>
+					</li>
+					<li class="contacts__item">
+						<a href="https://goo.gl/maps/bsQCPw7Vy61okesz5" class="contacts__linck" target="_blank">
+							<svg class="contacts__icon">
+								<use xlink:href="@img/icons/icons.svg#point"></use>
+							</svg>
+	
+							<span>
+								2715 Ash Dr. San Jose, South Dakota 83475
+							</span>
+						</a>
+					</li>
+				</ul>
 			</div>
 		</div>
+	</div>
+	<div class="footer__logo">
+		<img src="@img/footer_logo.svg" alt="logo">
 	</div>
 	<div class="footer__policy">
 		© Garden Industry 2023. Все права защищены
