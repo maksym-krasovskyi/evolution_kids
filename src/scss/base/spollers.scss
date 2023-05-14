@@ -13,6 +13,10 @@
 	font-weight: 400;
 	font-style: normal;
 	line-height: 108%;
+
+	@media (max-width:$mobileSmall){
+		font-size: rem(16);
+	}
 }
 // Заголовок спойлера
 .spollers__title {
@@ -30,6 +34,11 @@
 	font-style: normal;
 	color: #fff;
 	background: rgb(26, 162, 158);
+
+	@media (max-width:$mobileSmall){
+		padding: rem(20) rem(16); 
+		font-size: rem(18); 
+	}
 
 	&::marker {
 	}
@@ -100,4 +109,12 @@
 	border-radius: rem(5);
 	border: 1px solid #eee;
 	padding: rem(20) rem(30);
+
+	@media (max-width:$mobileSmall){
+		padding: rem(20) rem(16);  
+	}
+
+	p {
+		margin-bottom: 16px;
+	}
 }
