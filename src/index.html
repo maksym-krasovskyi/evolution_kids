@@ -80,24 +80,34 @@
           <div class="about__container">
             <h2 class="about__heading section-heading">О НАС</h2>
             <div class="about__content">
-              <p class="about__content-body">
-                GARDEN INDUSTRY – это больше, чем ландшафтный дизайн. Мы строим
-                качественные отношения, основанные на доверии. Более 9 лет
-                специалисты компании претворяют мечты клиентов в жизнь. Наша
-                компания обеспечивает тонкий баланс красоты и функциональности
-                проектов любой сложности. Ландшафтное проектирование, посадка
-                растений, укладка рулонного газона, ландшафтное освещение,
-                мощение тротуарной плитки, обслуживание и уход – и это еще не
-                весь список того, что мы можем сделать. Сотрудничество со
-                многими производителями материалов и растений позволяет нам
-                держать цены на доступном для вас уровне. Не медлите и свяжитесь
-                с нами, а мы сделаем то, что вы ожидаете от нас.
-              </p>
-              <img
-                class="about__content-img"
-                src="img/bg_offer_mobile.jpg"
-                alt=""
-              />
+              <div class="about__content-body">
+                <p>
+                  GARDEN INDUSTRY – это больше, чем ландшафтный дизайн. Мы
+                  строим качественные отношения, основанные на доверии. Более 9
+                  лет специалисты компании претворяют мечты клиентов в жизнь.
+                  Наша компания обеспечивает тонкий баланс красоты и
+                  функциональности проектов любой сложности. Ландшафтное
+                  проектирование, посадка растений, укладка рулонного газона,
+                  ландшафтное освещение, мощение тротуарной плитки, обслуживание
+                  и уход – и это еще не весь список того, что мы можем сделать.
+                  Сотрудничество со многими производителями материалов и
+                  растений позволяет нам держать цены на доступном для вас
+                  уровне. Не медлите и свяжитесь с нами, а мы сделаем то, что вы
+                  ожидаете от нас.
+                </p>
+              </div>
+
+              <div class="about__content-video">
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/IIVITJzDDC4"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
             </div>
           </div>
         </section>
@@ -310,6 +320,71 @@
         <section class="advantages">
           <div class="advantages__container">
             <h2 class="advantages__heading section-heading"></h2>
+          </div>
+        </section>
+
+        <section class="stock">
+          <div class="stock__container">
+            <div class="stock__content">
+              <h2 class="stock__heading section-heading">АКЦИЯ!!!</h2>
+              <p class="stock__content-text">
+                Только в июне первые 5 заказчиков получат Wi-Fi контроллер
+                Hunter HYDRAWISE СОВЕРШЕННО БЕСПЛАТНО!
+              </p>
+              <img class="stock__content-img" src="img/stock.png" alt="" />
+            </div>
+
+            <form action="" class="stock__form" id="stockForm">
+              <label class="stock__form-labele" for="stockForm"
+                >Отправить заявку:</label
+              >
+              <div class="stock__form-group">
+                <label class="form-group__labele" for="stockUserName"
+                  >Имя:</label
+                >
+                <input
+                  type="text"
+                  class="input stock__input"
+                  id="stockUserName"
+                  name="stockUserName"
+                  placeholder="Имя:"
+                />
+              </div>
+
+              <div class="stock__form-group">
+                <label class="form-group__labele" for="stockEmail"
+                  >Почта:</label
+                >
+                <input
+                  type="email"
+                  class="input stock__input"
+                  id="stockEmail"
+                  placeholder="example@mail.com"
+                  required="required"
+                  aria-required="true"
+                  name="stockEmail"
+                />
+              </div>
+              <div class="stock__form-group">
+                <label class="form-group__labele" for="stockPhone"
+                  >Телефон:</label
+                >
+                <input
+                  type="tel"
+                  class="input stock__input"
+                  id="stockPhone"
+                  placeholder="+3730xxxxx"
+                  required="required"
+                  aria-required="true"
+                  pattern="[0-9()#&+*-=.]+"
+                  name="stockPhone"
+                  title="Тоько цыфри и символы телефона (#, -, *, і т.д.) принимаются."
+                />
+              </div>
+              <button type="submit" class="btn btn-form stock__submit">
+                Отправить
+              </button>
+            </form>
           </div>
         </section>
 

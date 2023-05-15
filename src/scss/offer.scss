@@ -5,6 +5,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  min-height: 100vh;
 
   &__container {
     display: flex;
@@ -32,7 +33,7 @@
   }
 
   &__content-body {
-    font-family: PTSansNarrow;
+    font-family: PTSansNarrow, sans-serif;
     font-weight: 400;
     font-size: 24px;
     text-transform: uppercase;
