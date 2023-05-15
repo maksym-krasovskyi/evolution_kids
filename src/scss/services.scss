@@ -15,18 +15,18 @@
    &__row {
       display: flex;
       flex-wrap: wrap;
-      column-gap: 30px;
-      row-gap: 40px;
+      gap: 30px;
 
       font-family: PTSansNarrow, sans-serif;
    }
 
    // .services__item
    &__item {
-      width: calc(33.333% - 30px);
+      width: calc(33.333% - 20px);
+      margin-bottom: 20px;
 
       @media (max-width:$mobile){
-         width: calc(50% - 30px); 
+         width: calc(50% - 15px); 
       }
 
       @media (max-width:$mobileSmall){

@@ -23,7 +23,7 @@
 	width: 100%;
 	cursor: default;
 	text-align: left;
-	padding: rem(20) rem(30);
+	padding: rem(20) rem(44) rem(20) rem(30);
 	border-radius: rem(5);
 	position: relative;
 	list-style: none;
@@ -36,7 +36,7 @@
 	background: rgb(26, 162, 158);
 
 	@media (max-width:$mobileSmall){
-		padding: rem(20) rem(16); 
+		padding: rem(20) rem(42) rem(20) rem(16); 
 		font-size: rem(18); 
 	}
 

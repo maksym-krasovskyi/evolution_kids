@@ -112,3 +112,11 @@ footerForm?.addEventListener("submit", async function (e) {
     alert("Заполните обязательные поля!");
   }
 });
+
+
+
+//Scroll animation
+// ScrollReveal().reveal('.faq', { delay: 500 });
+ScrollReveal().reveal('.about__content-body', { delay: 450, distance: '100%', duration: 600, origin: 'left' });
+ScrollReveal().reveal('.about__content-img', { delay: 450, distance: '100%', duration: 600, origin: 'right' });
+ScrollReveal().reveal('.spollers__item', { delay: 400, distance: '60px', duration: 500, interval: 100, origin: 'bottom' });
