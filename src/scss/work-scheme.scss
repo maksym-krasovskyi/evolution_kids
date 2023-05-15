@@ -14,7 +14,7 @@
   &__content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-    grid-gap: 60px;
+    grid-gap: 30px;
     margin: 0 0 50px;
   }
 
@@ -24,13 +24,14 @@
     flex-direction: column;
     border: 2px solid #f6f6f6;
     padding: 10px;
-    transition: transform 0.2s;
+    transition: all 0.3s ease-in;
     @media (any-hover: hover) {
       &:hover {
-        z-index: 10;
         border-color: #1aa29e;
-        transform: scale(1.2);
+        transform: scale(1.1);
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
         & svg {
+          transition: all 0.3s ease-in;
           fill: #1aa29e;
         }
       }
