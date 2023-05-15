@@ -1,11 +1,10 @@
 .offer {
   display: flex;
   justify-content: center;
-  background-image: url(./img/gazon.jpeg);
+  background-image: url(./img/m_modern.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  margin: 0 0 80px;
 
   &__container {
     display: flex;
@@ -20,23 +19,25 @@
   &__content {
     display: flex;
     flex-direction: column;
+
     width: 600px;
-  
   }
 
   &__content-heading {
     max-width: 600px;
     width: 100%;
-    margin: 200px 0 30px;
+    margin: 200px 0 20px;
     color: #fff;
+    text-shadow: 2px 2px 2px #000;
   }
 
   &__content-body {
     font-family: PTSansNarrow;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 24px;
+    text-transform: uppercase;
     color: #fff;
-    text-shadow: 1px 1px 1px #000;
+    text-shadow: 2px 2px 2px #000;
     margin: 0 0 40px;
   }
 
@@ -67,8 +68,6 @@
 }
 @media (max-width: $mobile) {
   .offer {
-    background-image: url(./img/bg_offer_mobile.jpg);
-
     &__container {
       justify-content: center;
       margin: 100px 0 200px;

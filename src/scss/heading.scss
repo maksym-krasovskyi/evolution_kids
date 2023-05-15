@@ -2,8 +2,8 @@
   font-family: PTSansNarrow, sans-serif;
   font-weight: 700;
   text-shadow: 1px 1px 1px #000;
-  @include adaptiveValue("font-size", 48, 36);
-  line-height: 60px;
+  @include adaptiveValue("font-size", 48, 28);
+  @include adaptiveValue("line-height", 60, 36);
 }
 
 .section-heading {

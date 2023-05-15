@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(270deg, rgb(26, 162, 158) 28%, #2b3990 71%);
+  background: #2b3990;
   color: #fff;
   border: 2px solid #2b3990;
   padding: 15px 40px;
@@ -21,6 +21,8 @@
 }
 
 .offer__btn {
+  border: 2px solid #ff6500;
+  background-color: #ff6500;
   @include adaptiveValue("font-size", 20, 16);
   @media (any-hover: hover) {
     &:hover {
