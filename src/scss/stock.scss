@@ -1,4 +1,5 @@
 .stock {
+  margin: 0 0 80px;
   &__container {
     display: flex;
     flex-direction: row-reverse;
@@ -25,7 +26,11 @@
     font-family: PTSansNarrow, sans-serif;
     line-height: 24px;
     font-size: 18px;
-    max-width: 70%;
+    max-width: 80%;
+  }
+
+  &__content-img {
+    max-width: 300px;
   }
 
   &__form {
@@ -43,7 +48,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
     width: 60%;
     font-family: PTSansNarrow, sans-serif;
   }
@@ -53,7 +57,6 @@
   }
 
   &__input {
-    width: 75%;
   }
 
   &__submit {
@@ -62,4 +65,33 @@
 }
 .form-group__labele {
   display: none;
+}
+
+@media (max-width: $mobile) {
+  .stock {
+    &__container {
+      flex-direction: column;
+      justify-content: center;
+      flex: 1 1 100%;
+    }
+
+    &__content {
+      border-radius: 10px 10px 0 0;
+    }
+
+    &__form {
+      border-radius: 0 0 10px 10px;
+    }
+
+    &__form-labele {
+      margin: 30px 0 0;
+    }
+
+    &__submit {
+      margin: 0 0 40px;
+    }
+  }
+  .form-group__labele {
+    display: none;
+  }
 }
