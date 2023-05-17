@@ -1,5 +1,9 @@
 .stock {
-  margin: 0 0 80px;
+  padding: 100px 0;
+  background-image: url(../img/gazon.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   &__container {
     display: flex;
     flex-direction: row-reverse;
@@ -13,7 +17,8 @@
     align-items: center;
     justify-content: center;
     padding: 10px;
-    border: 2px solid #e0e0e0;
+    background-color: rgb(224, 224, 224, 0.5);
+
     border-radius: 0 10px 10px 0;
     width: 100%;
   }
@@ -27,6 +32,7 @@
     line-height: 24px;
     font-size: 18px;
     max-width: 80%;
+    color: #000;
   }
 
   &__content-img {
@@ -39,10 +45,11 @@
     justify-content: center;
     align-items: center;
     padding: 10px;
-    background-color: #e0e0e0;
+
+    border: 4px solid rgba(224, 224, 224, 0.5);
     border-radius: 10px 0 0 10px;
     width: 100%;
-    gap: 20px;
+    gap: 16px;
   }
   &__form-group {
     display: flex;
@@ -54,9 +61,13 @@
 
   &__form-labele {
     font-size: 24px;
+    color: #fff;
+    text-shadow: 2px 2px 2px #000;
   }
 
   &__input {
+    font-size: 20px;
+    padding: 8px 14px;
   }
 
   &__submit {
