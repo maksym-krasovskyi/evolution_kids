@@ -123,16 +123,52 @@ ScrollReveal().reveal(".about__content-body", {
   duration: 600,
   origin: "left",
 });
+
 ScrollReveal().reveal(".about__content-video", {
   delay: 450,
   distance: "100%",
   duration: 600,
   origin: "right",
 });
+
+
+ScrollReveal().reveal(".services__item", {
+  delay: 450,
+  distance: "80px",
+  duration: 600,
+  interval: 100,
+  origin: "left",
+});
+
+
+
+ScrollReveal().reveal(".gallery__item", {
+  delay: 400,
+  distance: "80px",
+  duration: 600,
+  interval: 50,
+  origin: "right",
+});
+
 ScrollReveal().reveal(".spollers__item", {
+  delay: 400,
+  distance: "100%",
+  duration: 500,
+  interval: 100,
+  origin: "bottom",
+});
+
+ScrollReveal().reveal(".advantages__block", {
   delay: 400,
   distance: "60px",
   duration: 500,
   interval: 100,
   origin: "bottom",
+});
+
+ScrollReveal().reveal(".advantages__partners", {
+  delay: 400,
+  distance: "100%",
+  duration: 500,
+  origin: "left",
 });
