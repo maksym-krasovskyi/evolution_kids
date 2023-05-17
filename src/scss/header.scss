@@ -219,9 +219,19 @@
 	}
 }
 
-._navigator-active.menu__link::before {
-	width: 100%;
+@media (min-width: 1079px){
+	._navigator-active.menu__link::before {
+		width: 100%;
+	} 
 }
+
+
+@media (max-width: 1080px) {
+	._navigator-active.menu__link {
+		color: #ff6500;
+	}
+}
+
 
 .language {
 
