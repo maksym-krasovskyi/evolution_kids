@@ -117,6 +117,14 @@ footerForm?.addEventListener("submit", async function (e) {
 
 //Scroll animation
 // ScrollReveal().reveal('.faq', { delay: 500 });
+
+ScrollReveal().reveal(".offer__content", {
+  delay: 400,
+  distance: "100%",
+  duration: 500,
+  origin: "top",
+});
+
 ScrollReveal().reveal(".about__content-body", {
   delay: 450,
   distance: "100%",
