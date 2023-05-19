@@ -67,7 +67,21 @@
     &._sending {
       opacity: 0.7;
     }
+
+    p {
+      // margin-top: -10px;
+      margin-bottom: 8px;
+      font-size: 0px;
+      color: #252525;
+  
+      label {
+        font-size: 0px;
+        color: #252525;
+      }
+    }
   }
+
+ 
 
   // .footer__form-group
   &__form-group {
@@ -90,7 +104,7 @@
     resize: none;
     font-size: 20px;
     padding: 8px 14px;
-    // margin-top: 8px;
+    height: 80px;
   }
 
   // .footer__submit

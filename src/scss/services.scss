@@ -64,6 +64,21 @@
     margin-bottom: 20px;
   }
 
+  &__list-wrap {
+    ul {
+      margin-top: auto;
+      padding-left: 20px;
+    }
+
+    li {
+      font-weight: 400;
+      font-size: rem(20);
+      line-height: 108%;
+      margin-bottom: 6px;
+      list-style-type: disc;
+    }
+  }
+
   // .services__list
   &__list {
     margin-top: auto;
