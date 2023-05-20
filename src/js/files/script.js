@@ -115,6 +115,29 @@ footerForm?.addEventListener("submit", async function (e) {
   }
 });
 
+document.querySelector(".offer__btn")?.addEventListener("click", function () {
+  flsModules.popup.open("#popup");
+});
+
+const popupEmail = document.querySelector("#popupEmail");
+const popupPhone = document.querySelector("#popupPhone");
+
+popupPhone?.addEventListener("input", function () {
+  if (!isValidPhone(popupPhonee.value)) {
+    popupPhonee.classList.add("_notvalid");
+  } else {
+    popupPhone.classList.remove("_notvalid");
+  }
+});
+
+popupEmail?.addEventListener("input", function () {
+  if (!isValidEmail(popupEmail.value)) {
+    popupEmail.classList.add("_notvalid");
+  } else {
+    popupEmail.classList.remove("_notvalid");
+  }
+});
+
 //Scroll animation
 // ScrollReveal().reveal('.faq', { delay: 500 });
 
@@ -139,7 +162,6 @@ ScrollReveal().reveal(".about__content-video", {
   origin: "right",
 });
 
-
 ScrollReveal().reveal(".services__item", {
   delay: 450,
   distance: "80px",
@@ -147,8 +169,6 @@ ScrollReveal().reveal(".services__item", {
   interval: 100,
   origin: "left",
 });
-
-
 
 ScrollReveal().reveal(".gallery__item", {
   delay: 400,
