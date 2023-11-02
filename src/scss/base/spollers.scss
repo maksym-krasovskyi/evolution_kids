@@ -5,6 +5,7 @@
 .spollers {
   display: grid;
   gap: 15px;
+  width: 100%;
 }
 // Спойлер
 .spollers__item {
@@ -32,8 +33,8 @@
   line-height: 110%;
   font-weight: 400;
   font-style: normal;
-  color: #fff;
-  background: #ad9161;
+  color: var(--text-secondary);
+  background: var(--bg-primary);
 
   @media (max-width: $mobileSmall) {
     padding: rem(20) rem(42) rem(20) rem(16);
@@ -109,6 +110,7 @@
   border-radius: rem(5);
   border: 1px solid #eee;
   padding: rem(20) rem(30);
+  color: var(--text-primary);
 
   @media (max-width: $mobileSmall) {
     padding: rem(20) rem(16);

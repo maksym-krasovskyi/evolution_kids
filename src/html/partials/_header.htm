@@ -1,0 +1,65 @@
+<header class="header">
+  <div class="header__contacts">
+    <div class="header__container container__up">
+      @@include('./_contacts.htm')
+    </div>
+  </div>
+  <div class="header__body">
+    <div class="header__container container__low">
+      <div class="header__logo">
+        <a href="#">Ірина Краснюк</a>
+      </div>
+
+      <div class="header__nav">
+        <div class="header__menu menu">
+          <button type="button" class="menu__icon icon-menu">
+            <span></span>
+          </button>
+          <nav class="menu__body">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="index.html" class="menu__link">Головна</a>
+              </li>
+              <li class="menu__item">
+                <a
+                  href="#"
+                  class="menu__link"
+                  data-goto-header
+                  data-goto="#calculator"
+                  >Про Мене</a
+                >
+              </li>
+              <li class="menu__item">
+                <a
+                  href="#"
+                  class="menu__link"
+                  data-goto-header
+                  data-goto="#why-us"
+                  >Послуги</a
+                >
+              </li>
+              <li class="menu__item">
+                <a
+                  href="#"
+                  data-goto-header
+                  data-goto="#blog"
+                  class="menu__link"
+                  >Консультації</a
+                >
+              </li>
+              <li class="menu__item">
+                <a
+                  href="#"
+                  class="menu__link"
+                  data-goto-header
+                  data-goto="#contacts"
+                  >Контакти</a
+                >
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

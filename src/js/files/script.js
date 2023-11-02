@@ -3,200 +3,99 @@ import { isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js";
 
-document
-  .querySelector(".request-call__button")
-  ?.addEventListener("click", function (e) {
-    document.querySelector(".request-call")?.classList.toggle("_show");
+const header = document.querySelector(".header");
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= 80) {
+    header.classList.add("header-scrolling");
+  } else {
+    header.classList.remove("header-scrolling");
+  }
+});
+
+// function generateStars() {
+//   const svg = document.getElementById("stars-svg");
+//   const group = svg.querySelector("#c0153062-95a7-412f-be95-4bccb94029e9");
+
+//   for (let i = 0; i < 300; i++) {
+//     const x = Math.random() * 545.39;
+//     const y = Math.random() * 294.79;
+//     const animationDelay = Math.random() * 2; // Random delay between 0 and 2 seconds
+
+//     const starPath = document.createElementNS(
+//       "http://www.w3.org/2000/svg",
+//       "path"
+//     );
+//     starPath.setAttribute("class", "stars-bg__star");
+//     starPath.setAttribute(
+//       "d",
+//       `M${x},${y}a1.18,1.18,0,1,0,1.18,1.18,1.18,1.18,0,0,0-1.18-1.18`
+//     );
+//     starPath.style.animationDelay = `${animationDelay}s`; // Set random animation delay
+
+//     group.appendChild(starPath);
+//   }
+// }
+
+// generateStars();
+
+// const cards = document.querySelectorAll(".card");
+
+// cards.forEach((card) => {
+//   card.addEventListener("click", () => {
+//     // Check if the card has the "selected" class
+//     if (card.classList.contains("selected")) {
+//       // If it has the class, remove it
+//       card.classList.remove("selected");
+//     } else {
+//       // If it doesn't have the class, add it
+//       card.classList.add("selected");
+
+//       // Remove the "selected" class from all other cards
+//       cards.forEach((otherCard) => {
+//         if (otherCard !== card) {
+//           otherCard.classList.remove("selected");
+//         }
+//       });
+//     }
+//   });
+// });
+
+const cards = document.querySelectorAll(".card");
+const toggleButtons = document.querySelectorAll(".toggleButton");
+
+cards.forEach((card, index) => {
+  card.addEventListener("click", () => {
+    toggleClass(index);
   });
 
-document
-  .querySelector(".request-call")
-  ?.addEventListener("click", function (e) {
-    e.stopPropagation();
+  toggleButtons[index].addEventListener("click", (event) => {
+    event.stopPropagation(); // Prevent card click event propagation
+    toggleClass(index);
   });
-
-document.querySelector("body").addEventListener("click", function () {
-  document.querySelector(".request-call")?.classList.remove("_show");
 });
 
-function isValidPhone(p) {
-  var phoneRe = /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g;
-  var digits = p.replace(/\D/g, "");
-  return phoneRe.test(digits);
+function toggleClass(index) {
+  cards.forEach((card, i) => {
+    if (i === index) {
+      card.classList.toggle("selected");
+    } else {
+      card.classList.remove("selected");
+    }
+  });
 }
 
-function isValidEmail(value) {
-  return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(value);
+const elements = document.querySelectorAll(".animated-element");
+let currentIndex = 0;
+
+function startAnimation() {
+  elements[currentIndex].style.animationPlayState = "running";
+  currentIndex = (currentIndex + 1) % elements.length;
+
+  // Pause the previous element
+  const previousIndex = (currentIndex - 1 + elements.length) % elements.length;
+  elements[previousIndex].style.animationPlayState = "paused";
+
+  setTimeout(startAnimation, 3000); // 3 seconds interval
 }
 
-const requestFormPhone = document.querySelector("#phone");
-requestFormPhone?.addEventListener("input", function () {
-  if (!isValidPhone(requestFormPhone.value)) {
-    requestFormPhone.classList.add("_notvalid");
-  } else {
-    requestFormPhone.classList.remove("_notvalid");
-  }
-});
-
-const requestForm = document.querySelector("#request-call");
-requestForm?.addEventListener("submit", async function (e) {
-  e.preventDefault();
-
-  let formData = new FormData(requestForm);
-
-  if (isValidPhone(requestFormPhone.value)) {
-    requestForm.classList.add("_sending");
-    let response = await fetch("sendmail.php", {
-      method: "POST",
-      body: formData,
-    });
-
-    if (response.ok) {
-      let result = await response.json();
-      alert(result.message);
-      requestForm.reset();
-      requestForm.classList.remove("_sending");
-    } else {
-      alert("Ошибка");
-      requestForm.classList.remove("_sending");
-    }
-  } else {
-    alert("Заполните обязательные поля!");
-  }
-});
-
-const footerEmail = document.querySelector("#footerEmail");
-const footerPhone = document.querySelector("#footerPhone");
-
-footerPhone?.addEventListener("input", function () {
-  if (!isValidPhone(footerPhone.value)) {
-    footerPhone.classList.add("_notvalid");
-  } else {
-    footerPhone.classList.remove("_notvalid");
-  }
-});
-
-footerEmail?.addEventListener("input", function () {
-  if (!isValidEmail(footerEmail.value)) {
-    footerEmail.classList.add("_notvalid");
-  } else {
-    footerEmail.classList.remove("_notvalid");
-  }
-});
-
-const footerForm = document.querySelector("#footerForm");
-footerForm?.addEventListener("submit", async function (e) {
-  e.preventDefault();
-
-  let error =
-    isValidEmail(footerEmail.value) && isValidPhone(footerPhone.value);
-
-  let formData = new FormData(footerForm);
-
-  if (error) {
-    footerForm.classList.add("_sending");
-
-    let response = await fetch("sendmail.php", {
-      method: "POST",
-      body: formData,
-    });
-
-    if (response.ok) {
-      let result = await response.json();
-      alert(result.message);
-      footerForm.reset();
-      footerForm.classList.remove("_sending");
-    } else {
-      alert("Ошибка");
-      footerForm.classList.remove("_sending");
-    }
-  } else {
-    alert("Заполните обязательные поля!");
-  }
-});
-
-document.querySelector(".offer__btn")?.addEventListener("click", function () {
-  flsModules.popup.open("#popup");
-});
-
-const popupEmail = document.querySelector("#popupEmail");
-const popupPhone = document.querySelector("#popupPhone");
-
-popupPhone?.addEventListener("input", function () {
-  if (!isValidPhone(popupPhonee.value)) {
-    popupPhonee.classList.add("_notvalid");
-  } else {
-    popupPhone.classList.remove("_notvalid");
-  }
-});
-
-popupEmail?.addEventListener("input", function () {
-  if (!isValidEmail(popupEmail.value)) {
-    popupEmail.classList.add("_notvalid");
-  } else {
-    popupEmail.classList.remove("_notvalid");
-  }
-});
-
-//Scroll animation
-// ScrollReveal().reveal('.faq', { delay: 500 });
-
-ScrollReveal().reveal(".offer__content", {
-  delay: 400,
-  distance: "100%",
-  duration: 500,
-  origin: "top",
-});
-
-ScrollReveal().reveal(".about__content-body", {
-  delay: 450,
-  distance: "100%",
-  duration: 600,
-  origin: "left",
-});
-
-ScrollReveal().reveal(".about__content-video", {
-  delay: 450,
-  distance: "100%",
-  duration: 600,
-  origin: "right",
-});
-
-ScrollReveal().reveal(".services__item", {
-  delay: 450,
-  distance: "80px",
-  duration: 600,
-  interval: 100,
-  origin: "left",
-});
-
-ScrollReveal().reveal(".gallery__item", {
-  delay: 400,
-  distance: "80px",
-  duration: 600,
-  interval: 50,
-  origin: "right",
-});
-
-ScrollReveal().reveal(".spollers__item", {
-  delay: 400,
-  distance: "100%",
-  duration: 500,
-  interval: 100,
-  origin: "bottom",
-});
-
-ScrollReveal().reveal(".advantages__block", {
-  delay: 400,
-  distance: "60px",
-  duration: 500,
-  interval: 100,
-  origin: "bottom",
-});
-
-ScrollReveal().reveal(".advantages__partners", {
-  delay: 400,
-  distance: "100%",
-  duration: 500,
-  origin: "left",
-});
+startAnimation();

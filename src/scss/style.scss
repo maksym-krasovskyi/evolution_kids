@@ -25,7 +25,7 @@ $fontSize: rem(14); // де 14(px) - розмір шрифту за замовч
 $mainColor: #000; // Колір шрифту за замовчуванням
 
 // Палітра кольорів
-// @import "base/colors-palette";
+@import "base/colors-palette";
 
 // Налаштування адаптивної сітки ===============================================================================================================================================================================================================================================================================================
 
@@ -34,7 +34,7 @@ $minWidth: 320;
 // Ширина полотна (макету)
 $maxWidth: 1920;
 // Ширина обмежуючого контейнера (0 = немає обмеження)
-$maxWidthContainer: 1170;
+$maxWidthContainer: 1440;
 // Загальний відступ у контейнера
 // (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
 $containerPadding: 40;
@@ -160,26 +160,14 @@ body {
 @import "common";
 
 // Підключення стилів окремих блоків
-@import "header";
-@import "footer";
+@import "./components/header.scss";
+@import "./components/footer.scss";
+@import "./components/btn.scss";
+@import "./components/contacts.scss";
+@import "./layout/hero.scss";
+@import "./layout/about.scss";
+@import "./layout/cases.scss";
+@import "./layout/diagnostics.scss";
+@import "./layout/faq.scss";
 
 // Підключення стилів окремих сторінок
-@import "home";
-
-@import "heading";
-
-@import "offer";
-@import "trust-triggers";
-@import "about";
-@import "gallery";
-@import "work-scheme";
-@import "button";
-@import "stock";
-@import "services";
-@import "advantages";
-@import "faq";
-
-
-html {
-  background: #3b3b3d;
-}

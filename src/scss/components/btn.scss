@@ -1,0 +1,58 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 30px;
+  background-color: #2d394b;
+  color: #fff;
+  transition: all 0.3s ease-in;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: #fff;
+      color: #2d394b;
+    }
+  }
+
+  &:focus,
+  &:focus-visible {
+    box-shadow: rgba(255, 255, 255, 0.16) 0px 1px 4px,
+      rgb(255, 255, 255) 0px 0px 0px 2px;
+  }
+}
+
+.primary {
+  background-color: #2d394b;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: #fff;
+      color: #2d394b;
+    }
+  }
+}
+
+.secondary {
+  background-color: #e0a067;
+  padding: 8px 40px;
+  // border: 1px solid #fff;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: #fff;
+      color: #2d394b;
+    }
+  }
+}
+
+.info {
+  background-color: #1db38a;
+  border-radius: 18px;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background: #fff;
+      color: #2d394b;
+    }
+  }
+}

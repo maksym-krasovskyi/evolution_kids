@@ -1,0 +1,124 @@
+.about {
+  // background-color: #f6f9f9;
+  padding: 150px 0;
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__subheading {
+    text-align: center;
+    color: var(--subheading);
+    margin: 0 0 15px;
+  }
+  &__heading {
+    margin: 0 0 40px;
+    text-align: center;
+    color: var(--heading);
+  }
+
+  &__header {
+    max-width: 800px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .about__title,
+    .about__text-body {
+      text-align: center;
+    }
+  }
+  &__content {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(3, 30% calc(40% - 80px) 30%);
+  }
+
+  &__img {
+    position: relative;
+    height: 500px;
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+      ". . img__2 img__2 . . "
+      "img__1 img__1 img__2 img__2 . ."
+      "img__1 img__1 img__2 img__2 img__3 img__3"
+      "img__1 img__1 img__4 img__4 img__3 img__3"
+      "img__5 img__5 img__4 img__4 img__3 img__3"
+      "img__5 img__5 img__4 img__4 . .";
+
+    .img__1 {
+      position: relative;
+      grid-area: img__1;
+      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.54);
+      border-radius: 10px;
+    }
+
+    .img__2 {
+      position: relative;
+      grid-area: img__2;
+    }
+
+    .img__3 {
+      position: relative;
+      grid-area: img__3;
+    }
+
+    .img__4 {
+      position: relative;
+      grid-area: img__4;
+    }
+
+    .img__5 {
+      position: relative;
+      grid-area: img__5;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+      border-radius: 10px;
+    }
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__title {
+    color: #000;
+    margin: 0 0 20px 0;
+    color: var(--heading);
+  }
+  &__text-body {
+    color: var(--text-primary);
+    margin: 0 0 30px;
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animated-element {
+  animation: scale 3s infinite linear;
+  animation-play-state: paused;
+}
