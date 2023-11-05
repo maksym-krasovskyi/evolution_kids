@@ -8,50 +8,19 @@
     display: flex;
   }
 
-  &__heading {
-    font-family: PTSansNarrow, sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    font-size: rem(32);
-    line-height: 108%;
-    margin-bottom: 34px;
-  }
-
   &__nav {
     .menu__list {
       flex-direction: column;
       gap: 20px;
     }
-  }
-
-  &__content {
-    display: flex;
-    align-items: start;
-    gap: 30px;
-
-    @media (max-width: em(1200)) {
-      flex-wrap: wrap;
-    }
-  }
-
-  &__map {
-    flex: 1 1 33.333%;
-    max-height: 440px;
-
-    @media (max-width: em(1200)) {
-      flex: 1 1 100%;
-    }
-
-    iframe {
-      width: 100%;
-      height: 440px;
-      border-radius: 4px;
+    .menu__link {
+      color: #fff;
     }
   }
 
   &__contacts {
     .contacts {
-      flex-direction: column;
+      flex-direction: column-reverse;
       &__link {
         span {
           display: block;

@@ -7,6 +7,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    // display: grid;
+    // gap: 40px;
+    // grid-template-columns: repeat(2, 50%);
   }
   &__subheading {
     text-align: center;
@@ -34,27 +37,30 @@
   &__content {
     display: grid;
     gap: 40px;
-    grid-template-columns: repeat(3, 30% calc(40% - 80px) 30%);
+    grid-template-columns: repeat(2, 50%);
   }
 
   &__img {
     position: relative;
-    height: 500px;
+
+    // height: 500px;
     display: grid;
     gap: 20px;
     grid-template-areas:
-      ". . img__2 img__2 . . "
-      "img__1 img__1 img__2 img__2 . ."
+      "instagram instagram img__2 img__2 img__6 img__6 "
+      "img__1 img__1 img__2 img__2 img__6 img__6"
       "img__1 img__1 img__2 img__2 img__3 img__3"
       "img__1 img__1 img__4 img__4 img__3 img__3"
       "img__5 img__5 img__4 img__4 img__3 img__3"
-      "img__5 img__5 img__4 img__4 . .";
+      "img__5 img__5 img__4 img__4 telegram telegram";
+    grid-template-columns: 100px;
+    grid-template-rows: 100px 100px 100px 100px 100px 100px;
 
     .img__1 {
       position: relative;
       grid-area: img__1;
-      box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.54);
-      border-radius: 10px;
+      //   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.54);
+      //   border-radius: 10px;
     }
 
     .img__2 {
@@ -75,6 +81,83 @@
     .img__5 {
       position: relative;
       grid-area: img__5;
+    }
+
+    .img__6 {
+      position: relative;
+      grid-area: img__6;
+    }
+
+    .instagram {
+      grid-area: instagram;
+      position: relative;
+      border-radius: 10px;
+      background-color: var(--bg-header);
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        height: 70%;
+        object-fit: contain;
+        z-index: 1;
+        fill: #fff;
+      }
+    }
+
+    .telegram {
+      grid-area: telegram;
+      position: relative;
+      background-color: var(--bg-header);
+      border-radius: 10px;
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        height: 70%;
+        object-fit: cover;
+        z-index: 1;
+        fill: #fff;
+      }
+    }
+
+    .phone {
+      grid-area: phone;
+      position: relative;
+      background-color: var(--bg-header);
+      border-radius: 10px;
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        height: 70%;
+        object-fit: cover;
+        z-index: 1;
+        fill: #fff;
+      }
+    }
+
+    .adress {
+      grid-area: adress;
+      position: relative;
+      background-color: var(--bg-header);
+      border-radius: 10px;
+      svg {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        height: 70%;
+        object-fit: cover;
+        z-index: 1;
+        fill: #fff;
+      }
     }
 
     img {

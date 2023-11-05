@@ -1,0 +1,51 @@
+.trust-trigger {
+  //   background-color: var(--bg-header);
+  //   background-color: var(--bg-primary);
+  &__container {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    // background-color: var(--bg-primary);
+    // border: 2px solid var(--bg-primary);
+    max-width: 300px;
+    width: 100%;
+    max-height: 500px;
+    border-radius: 10px;
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: #fff;
+    // box-shadow: 0px 0px 15px -3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 30px -5px rgba(0, 0, 0, 0.1);
+  }
+
+  &__number {
+    text-align: center;
+    // color: #fff;
+    color: var(--subheading);
+    padding-bottom: 20px;
+    display: none;
+  }
+
+  &__text {
+    // color: #fff;
+    padding: 30px 0 0;
+    text-align: center;
+    color: var(--text-primary);
+  }
+}
